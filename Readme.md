@@ -9,7 +9,7 @@ Será uma aplicação de delivery de um restaurante, onde o usuário poderá esc
 
 ## 02. Tela de Cadastro
 
-1. Usuário pode cadastrar uma conta com email e senha
+1. Usuário pode cadastrar uma conta com email e senha (CREATE)
 3. Usuário poderá configurar acesso com biometria
 
 
@@ -22,12 +22,12 @@ Será uma aplicação de delivery de um restaurante, onde o usuário poderá esc
 
 ## 05. Tela de itens do menu
 1. Listagem de itens do menu (RETRIEVE)
-2. Adicionar itens no carrinho (CREATE)
+2. Adicionar itens no carrinho
 3. Ir para o carrinho
 
 ## 06. Tela de detalhes do produto
 1. Visualizar detalhes do produto (RETRIEVE)
-2. Adicionar produto no carrinho (CREATE)
+2. Adicionar produto no carrinho
 
 ## 07. Tela de checkout
 1. Alterar quantidade de um item do carrinho ou removê-lo
