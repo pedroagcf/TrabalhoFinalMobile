@@ -13,7 +13,6 @@ class HomeViewModel(application: Application): AndroidViewModel(application) {
     var loading: MutableLiveData<Boolean> = MutableLiveData()
     var stateFavorite: MutableLiveData<String> = MutableLiveData()
 
-
     private fun errorMessage(message: String) {
         error.value = message
     }
