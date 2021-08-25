@@ -18,6 +18,8 @@ class HomeActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
+        productDataSource.getRealTimeDatabase()
+
         val recyclerView = findViewById<RecyclerView>(R.id.product_list_rv)
         val adapter = ProductAdapter(this, productDataSource)
 
