@@ -13,6 +13,7 @@ class ProductAdapter(private val context: Context, private val dataset: Datasour
     : RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {
     class ProductViewHolder(private val view: View): RecyclerView.ViewHolder(view) {
         val productTitle: TextView = view.findViewById(R.id.product_title)
+        val productPrice: TextView = view.findViewById(R.id.product_price)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
@@ -22,7 +23,8 @@ class ProductAdapter(private val context: Context, private val dataset: Datasour
 
     override fun onBindViewHolder(holder: ProductViewHolder, position: Int) {
         val product = dataset.products[position]
-        holder.productTitle.text = product.title
+        holder.productTitle.text = product.name
+        holder.productPrice.text = product.price
     }
 
     override fun getItemCount(): Int {

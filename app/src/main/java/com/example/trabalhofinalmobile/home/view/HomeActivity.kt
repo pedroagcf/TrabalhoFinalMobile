@@ -8,22 +8,25 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.trabalhofinalmobile.R
 import com.example.trabalhofinalmobile.adapter.ProductAdapter
 import com.example.trabalhofinalmobile.data.Datasource
+import com.example.trabalhofinalmobile.databinding.ActivityHomeBinding
 import com.example.trabalhofinalmobile.home.viewmodel.HomeViewModel
 
 class HomeActivity: AppCompatActivity() {
-
+    lateinit var binding: ActivityHomeBinding
     var productDataSource = Datasource()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
+        binding = ActivityHomeBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        productDataSource.getRealTimeDatabase()
+        productDataSource.getCatalog()
 
         val recyclerView = findViewById<RecyclerView>(R.id.product_list_rv)
         val adapter = ProductAdapter(this, productDataSource)
 
         recyclerView.adapter = adapter
+        productDataSource.adapter = adapter
     }
 
     private val viewModel: HomeViewModel by lazy {

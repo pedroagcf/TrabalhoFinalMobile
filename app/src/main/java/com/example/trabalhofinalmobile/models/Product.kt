@@ -1,16 +1,8 @@
 package com.example.trabalhofinalmobile.models
 
-data class Product(
-    var title: String = "title"
-
-//    @SerializedName("dates")
-//    val dates: Dates = Dates(),
-//    @SerializedName("page")
-//    val page: Int = 0,
-//    @SerializedName("results")
-//    val results: List<Result> = listOf(),
-//    @SerializedName("total_pages")
-//    val totalPages: Int = 0,
-//    @SerializedName("total_results")
-//    val totalResults: Int = 0
-)
+class Product() {
+    lateinit var id: String
+    lateinit var name: String
+    lateinit var price: String
+    lateinit var description: String
+}
